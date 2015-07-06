@@ -1,4 +1,4 @@
-<style>
+<html><head><style>
 
 body {
   overflow: hidden;
@@ -6,7 +6,34 @@ body {
   background-size: fill;
 }
 
+.screen-border {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.moving-scanline{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0.3;
+
+	animation: movescan 30s infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes movescan {
+	0% {
+		top: -100%;
+	}
+	100% {
+		top: 0%;
+	}
+}
+
 </style>
-<body>
-  <img class="logo" src="http://i.imgur.com/oeStEui.png"></img>
-</body>
+</head><body>
+	<img class="logo" src="http://i.imgur.com/oeStEui.png">
+	<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
+	<img class="moving-scanline" width="100%" height="200%" src="http://i.imgur.com/JicOwjF.png">
+</body></html>
