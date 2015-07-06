@@ -1,0 +1,100 @@
+<html><head><style>
+
+body {
+  overflow: hidden;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/71/29/54/712954f88a7a7f18ba10f5b8a679d743.jpg");
+  background-color: #000;
+  background-size: cover;
+  background-position-x: 55%; 
+
+  animation: glitch 10s infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes glitch {
+	0% {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/736x/71/29/54/712954f88a7a7f18ba10f5b8a679d743.jpg");
+	}
+	49% {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/736x/71/29/54/712954f88a7a7f18ba10f5b8a679d743.jpg");
+	}
+	50% {
+		background-image: none;
+	}
+	51% {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/736x/71/29/54/712954f88a7a7f18ba10f5b8a679d743.jpg");
+	}
+	100% {
+		background-image: url("https://s-media-cache-ak0.pinimg.com/736x/71/29/54/712954f88a7a7f18ba10f5b8a679d743.jpg");
+	}
+}
+
+.logo {
+
+	animation: logoflicker 3.5s infinite;
+  	animation-timing-function: linear;
+}
+
+
+@keyframes logoflicker {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	26.5% {
+		opacity: 1;
+	}
+	95% {
+		width: auto;
+		height: auto;
+	}
+	96% {
+		width: 100%;
+		height: 20%;
+	}
+	96.5% {
+		width: auto;
+		height: auto;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.screen-border {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.moving-scanline{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0.3;
+
+	animation: movescan 3s infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes movescan {
+	0% {
+		top: -10%;
+	}
+	100% {
+		top: 0%;
+	}
+}
+
+</style>
+</head><body>
+	<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
+	<img class="logo" src="http://i.imgur.com/Jr92dzS.png">
+	<img class="moving-scanline" width="100%" height="110%" src="http://i.imgur.com/JicOwjF.png">
+</body></html>
