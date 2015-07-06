@@ -3,7 +3,67 @@
 body {
   overflow: hidden;
   background-image: url("http://i.imgur.com/cYXgQG4.jpg");
+  background-color: #000;
   background-size: fill;
+
+  animation: glitch 10s infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes glitch {
+	0% {
+		background-image: url("http://i.imgur.com/cYXgQG4.jpg");
+	}
+	49% {
+		background-image: url("http://i.imgur.com/cYXgQG4.jpg");
+	}
+	50% {
+		background-image: none;
+	}
+	51% {
+		background-image: url("http://i.imgur.com/cYXgQG4.jpg");
+	}
+	100% {
+		background-image: url("http://i.imgur.com/cYXgQG4.jpg");
+	}
+}
+
+.logo {
+
+	animation: logoflicker 3.5s infinite;
+  	animation-timing-function: linear;
+}
+
+
+@keyframes logoflicker {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	26% {
+		opacity: 0;
+	}
+	26.5% {
+		opacity: 1;
+	}
+	95% {
+		width: auto;
+		height: auto;
+	}
+	96% {
+		width: 100%;
+		height: 20%;
+	}
+	96.5% {
+		width: auto;
+		height: auto;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .screen-border {
