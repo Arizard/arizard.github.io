@@ -92,9 +92,39 @@ body {
 	}
 }
 
+.skellington {
+
+	animation: doot 10s infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+
+	position: absolute;
+
+	left:50%;
+	margin-left: -156px;
+
+	top: 50%;
+	margin-top: -156px;
+
+	clear: all;
+}
+
+@keyframes doot {
+	0% {
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
 </style>
 </head><body>
 	<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
 	<img class="logo" src="http://i.imgur.com/jhys3mN.png">
+	<img class="skellington" src="http://i.imgur.com/bbpazIq.gif">
 	<img class="moving-scanline" width="100%" height="110%" src="http://i.imgur.com/JicOwjF.png">
+
 </body></html>
