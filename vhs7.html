@@ -1,4 +1,11 @@
-<html><head><style>
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!-- Include Gayquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<style>
 
 body {
   overflow: hidden;
@@ -83,6 +90,42 @@ body {
 	animation-timing-function: linear;
 }
 
+#commits {
+	font-family: "Franklin Gothic";
+	font-size: 16px;
+	color: #fff;
+
+	position: absolute;
+
+	width: 400px;
+	left: 50%;
+	bottom: 8px;
+	margin-left: -200px;
+
+
+	background-color: rgba(0,0,0,0.8);
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	padding: 8px;
+	padding-right: 16px;
+	padding-left: 16px;
+	padding-top: 0px;
+
+}
+
+.commitbox {
+
+}
+.commitdate {
+	color: #999;
+	font-size: 12px;
+}
+.commitmessage {
+	width: 90%;
+	margin-left: 12px;
+}
+
 @keyframes movescan {
 	0% {
 		top: -10%;
@@ -94,7 +137,33 @@ body {
 
 </style>
 </head><body>
-	<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
-	<img class="logo" src="http://i.imgur.com/jhys3mN.png">
-	<img class="moving-scanline" width="100%" height="110%" src="http://i.imgur.com/JicOwjF.png">
-</body></html>
+
+	
+	<div style="">
+		<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
+		<img class="logo" src="http://i.imgur.com/jhys3mN.png">
+		<img class="moving-scanline" width="100%" height="110%" src="http://i.imgur.com/JicOwjF.png">
+	</div>
+
+	<div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;">
+		<div id="commits"></div>
+	</div>
+	
+</body>
+
+<script>
+	var commiturl = "https://api.github.com/repos/Arizard/deathrun/commits?since=2015-07-07-00-00-00";
+	$.get( commiturl, function(data)
+	{
+		$("#commits").append("<h3>Recent Updates</h3>");
+
+		console.log( data[0]["commit"]["message"] )
+
+		for (i=0;i<5;i++)
+		{
+			$("#commits").append( "<p class='commitbox'><span class='commitdate'>" + data[i]["commit"]["committer"]["date"] + "</span><br><span class='commitmessage'>" + data[i]["commit"]["message"] + "</span></p>" );
+		}
+	});
+</script>
+
+</html>
