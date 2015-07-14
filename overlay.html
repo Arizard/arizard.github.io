@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<style>
+
+body {
+  overflow: hidden;
+  background-size: cover;
+  background-position-x: 55%; 
+
+  animation: glitch 10s infinite;
+  -webkit-animation: glitch 10s infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.logo {
+
+	animation: logoflicker 3.5s infinite;
+  	animation-timing-function: linear;
+}
+
+
+
+.screen-border {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.moving-scanline{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	opacity: 0.3;
+
+	animation: movescan 3s infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes movescan {
+	0% {
+		top: -10%;
+	}
+	100% {
+		top: 0%;
+	}
+}
+
+</style>
+</head><body>
+
+	
+	<div style="">
+		<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
+	</div>
+	
+</body>
+
+</html>
