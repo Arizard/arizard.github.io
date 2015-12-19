@@ -146,26 +146,20 @@ body {
 	</div>
 
 	<div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;">
-		<div id="commits"></div>
+		<div id="commits">
+			<h3>December 2015</h3>
+			<ul>
+				<li>Added DJ Snake, ZHU to jukebox</li>
+				<li>Players with VHS7 in their name will emit a sleigh bell noise when they walk</li>
+				<li>Added deathrun_atomic_warfare_gmod</li>
+				<li>Temporarily removed jukebox "now playing" message</li>
+				<li>Added Magenta, Cyan, and Sonic Blue trails/colours</li>
+				<li>Added 24 taunts, including DJ Khaled, Arnold Schwarzenegger, and Liberty Prime</li>
+				<li>Reduced taunt cooldown to 15 seconds</li>
+			</ul>
+		</div>
 	</div>
 	
 </body>
-
-<script>
-	var commiturl = "https://api.github.com/repos/Arizard/deathrun/commits?since=2015-07-07-00-00-00";
-	$.get( commiturl, function(data)
-	{
-		$("#commits").append("<h3>Recent Updates</h3>");
-
-		console.log( data[0]["commit"]["message"] )
-
-		for (i=0;i<5;i++)
-		{
-			$("#commits").append( "<p class='commitbox'><span class='commitdate'>" + data[i]["commit"]["committer"]["date"] + "</span><br><span class='commitmessage'>" + data[i]["commit"]["message"] + "</span></p>" );
-		}
-		
-		$("#commits").append("<p>Visit <b>github.com/Arizard/deathrun</b> to get this gamemode!</p>");
-	});
-</script>
 
 </html>
