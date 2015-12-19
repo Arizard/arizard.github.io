@@ -19,8 +19,8 @@
 		if ( volume_param != "" )
 		{
 			ytplayer.setVolume( parseInt( volume_param ) )
-			ytplayer.addEventListener("onStateChange", "onytplayerStateChange")
 		}
+		ytplayer.addEventListener("onStateChange", "onytplayerStateChange")
 	}
 	
 	function onytplayerStateChange(newState) {
