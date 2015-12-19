@@ -19,6 +19,14 @@
 		if ( volume_param != "" )
 		{
 			ytplayer.setVolume( parseInt( volume_param ) )
+			ytplayer.addEventListener("onStateChange", "onytplayerStateChange")
+		}
+	}
+	
+	function onytplayerStateChange(newState) {
+		if (newState == 0)
+		{
+	   		console.log("RUNLUA:RS:JukeboxPlayNext()");
 		}
 	}
 </script>
