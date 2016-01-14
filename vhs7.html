@@ -11,43 +11,13 @@ body {
   overflow: hidden;
   background: url("http://i.imgur.com/8FFLv6o.jpg");
 	background-size: auto 1080px;
+	color: #FFFDE6;
 }
 
 .logo {
-
-	animation: logoflicker 3.5s infinite;
-  	animation-timing-function: linear;
-}
-
-
-@keyframes logoflicker {
-	0% {
-		opacity: 1;
-	}
-	25% {
-		opacity: 1;
-	}
-	26% {
-		opacity: 0;
-	}
-	26.5% {
-		opacity: 1;
-	}
-	95% {
-		width: auto;
-		height: auto;
-	}
-	96% {
-		width: 100%;
-		height: 20%;
-	}
-	96.5% {
-		width: auto;
-		height: auto;
-	}
-	100% {
-		opacity: 1;
-	}
+	height: 155px;
+	margin-left: 32px;
+	margin-top: 8px;
 }
 
 .screen-border {
@@ -60,7 +30,7 @@ body {
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	opacity: 0.3;
+	opacity: 0.1;
 
 	animation: movescan 3s infinite;
 	animation-timing-function: linear;
@@ -74,8 +44,7 @@ body {
 	font-family: Roboto, Arial, sans-serif;
 	font-size: 16px;
 	color:#fff;
-	background: -moz-linear-gradient(#ff00ff, #00ffff);
-	background: -webkit-linear-gradient(#ff00ff, #00ffff);
+	background: #FF5150;
 
 	position: absolute;
 
@@ -84,7 +53,6 @@ body {
 	overflow: hidden;
 	height: 100%;
 	
-	background-color: rgba(0,0,0,0.8);
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
@@ -125,12 +93,12 @@ body {
 	font-size: 32px;
 	font-weight: bold;
 	font-style: italic;
-	color:#ff65ff;
-	text-shadow: 1px 1px #00ffff;
+	color:#FFFDE6;
+	
 	
 	position:absolute;
-	top:135px;
-	left:8px;
+	top:145px;
+	left:32px;
 	
 	padding: 10px;
 	box-sizing: border-box;
@@ -138,12 +106,16 @@ body {
 }
 #meme {
 	position:absolute;
-	bottom: 16px;
-	left: 16px;
+	bottom: 36px;
+	left: 36px;
 }
 
+
+
 </style>
-</head><body>
+</head>
+
+<body>
 	<div id="meme">
 		<img src="http://i.imgur.com/LUvDTDu.png" width="300px">
 	</div>
@@ -151,9 +123,9 @@ body {
 		<p>Add VHS7 anywhere in your steam name to earn <b>double</b> VaporCredits (VC) and find <b>twice</b> as many crates!</p>
 	</div>
 	<div style="">
-		<img class="screen-border" width="100%" height="100%" src="http://i.imgur.com/GRwTNJi.png">
-		<img class="logo" src="http://i.imgur.com/iFnpBdM.png">
-		<img class="moving-scanline" width="100%" height="110%" src="http://i.imgur.com/JicOwjF.png">
+		<img class="screen-border" src="http://i.imgur.com/GRwTNJi.png" height="100%" width="100%">
+		<img src="http://i.imgur.com/9o0VCIo.png" class="logo">
+		<img class="moving-scanline" src="http://i.imgur.com/JicOwjF.png" height="110%" width="100%">
 	</div>
 
 	<div style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;">
@@ -170,9 +142,12 @@ body {
 		</div>
 	</div>
 	
-	<audio src="http://a.pomf.cat/clrdqw.ogg" type="audio/ogg" autoplay>
+	<audio src="http://a.pomf.cat/clrdqw.ogg" type="audio/ogg" autoplay="">
 	</audio>
 	
+
+
+
 </body>
 
 </html>
