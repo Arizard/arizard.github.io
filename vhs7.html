@@ -9,9 +9,20 @@
 
 body {
   overflow: hidden;
-  background: url("http://i.imgur.com/8FFLv6o.jpg");
-	background-size: auto 1080px;
-	color: #FF5150;
+  background: url("http://i.imgur.com/8FFLv6o.jpg") no-repeat left center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	top: 0px;
+	padding: 0;
+	margin: 0;
+	-o-background-size: cover;
 }
 
 .logo {
