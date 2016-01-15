@@ -153,11 +153,24 @@ body {
 		</div>
 	</div>!-->
 	
-	<audio id="music" src="https://d.maxfile.ro/fbommnnbsw.ogg" autoplay>
-		
+	<audio id="music" src = "" >
+
 	</audio>
 	<script>
-		$('#music').prop("volume", 0.6);
+		var sounds = [
+			"https://d.maxfile.ro/dbgqlfxrym.ogg",
+			"https://d.maxfile.ro/zdklhdefrb.ogg",
+			"https://d.maxfile.ro/gmdcsgfhzl.ogg",
+			"https://d.maxfile.ro/xhlgwsqvlg.wav",
+			"https://d.maxfile.ro/ebcodbpnsi.wav",
+			"https://d.maxfile.ro/hjaqoevwuo.wav",
+			"https://d.maxfile.ro/hjaqoevwuo.wav",
+			"https://d.maxfile.ro/yjijdoyfkp.wav",
+			"https://d.maxfile.ro/yjijdoyfkp.wav"
+		];
+		$('#music').attr('src', sounds[Math.floor( Math.random() * sounds.length )]);
+		$('#music').prop("volume", 0.5);
+		$('#music').get(0).play();
 	</script>
 	
 </body>
